@@ -1,0 +1,49 @@
+*,*::before, *::after
+	box-sizing: border-box
+
+button
+	background-color: #fff
+input
+	text-align: right
+
+.calc_key
+	margin-right: 5px
+
+.container
+	width: 220px
+	margin: 0 auto
+
+.row
+	padding-bottom: 5px
+	display: flex
+	justify-content: center
+	.calc_key
+		&:last-child
+			margin-right: 0px
+
+
+.calc
+	background-color: #999
+
+.calc_disp
+	margin-bottom: 10px
+	width: 100%
+
+.calc_key
+	width: 35px
+	height: 35px
+	cursor: pointer
+
+.pow
+	background-image: url(../img/x^n.png)
+	background-size: cover
+	background-position: center
+
+
+.backspace
+	background-image: url(../img/backspace.png)
+	background-size: cover
+	background-position: center
+
+.equal
+	width: 75px
