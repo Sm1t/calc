@@ -53,6 +53,9 @@ input {
 .equal {
   width: 75px; }
 
+.sin, .cos {
+  width: 95px; }
+
 .sqrt {
   background-image: url(../img/sqrt.png);
   background-size: cover;

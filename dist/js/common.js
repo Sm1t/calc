@@ -14,6 +14,8 @@ $(function(){
 	var pow = calc.find('.pow');
 	var pm = calc.find('.plus_minus');
 	var sqrt = calc.find('.sqrt');
+	var sin = calc.find('.sin');
+	var cos = calc.find('.cos');
 	var a;
 	var char;
 	var str;
@@ -77,13 +79,13 @@ $(function(){
 		var res = 1;
 		var x = parseInt(a); //Целая часть
 		var y = a - x; //Дробная часть
-		if (eval(disp.val()) > 0 && y == 0) {
+		if (eval(disp.val()) >= 0 && y == 0) {
 			while (a > 1){
 			res = res*a;
 			a = a-1;
 			}
 		disp.val(res);
-		} else disp.val('Non correct value');
+		} else disp.val('Not correct');
 		
 	});
 
@@ -107,8 +109,18 @@ $(function(){
 		disp.val(eval(disp.val()+'*-1'));
 	});
 
+	/*---------Квадратный корень---------*/
 	sqrt.on('click', function(){
 		disp.val(Math.sqrt(disp.val()));
+	});
+
+	/*---------Синус и косинус---------*/
+	sin.on('click', function(){
+		disp.val(Math.sin(disp.val()));
+	});
+
+	cos.on('click', function(){
+		disp.val(Math.cos(disp.val()));
 	});
 
 });
